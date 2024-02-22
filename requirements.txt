@@ -1,0 +1,7 @@
+SQLAlchemy
+SQLAlchemy-Utils
+psycopg2
+inspector
+fastapi[all]
+Alembic
+-e .
