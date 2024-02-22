@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+from db.db_setup import engine, session_local
 
 
 app = FastAPI(
