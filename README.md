@@ -20,4 +20,7 @@ NOTE: you don't need to create the database beforehand, just give it a name and 
 
 # To run the project
 after adding the db_info.py file:
-in the root directory, run: uvicorn main:app --reload
+in the root directory, run: 
+
+pip install -r requirements.txt
+uvicorn main:app --reload
