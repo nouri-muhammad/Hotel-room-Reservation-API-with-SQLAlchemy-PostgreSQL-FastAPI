@@ -23,4 +23,5 @@ after adding the db_info.py file:
 in the root directory, run: 
 
 pip install -r requirements.txt
+
 uvicorn main:app --reload
