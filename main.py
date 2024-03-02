@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from db.db_setup import engine, session_local
+from api import users, hotels, bookings
 
 
 app = FastAPI(
@@ -10,13 +10,14 @@ app = FastAPI(
     contact={
         "name": "Nouri Muhammad",
         "email": "nouri.muhammad1991@gmail.com",
-    },
-    license_info={
-        "name": "MIT",
-    },
+    }
 )
 
 
+app.include_router(users.router)
+app.include_router(hotels.router)
+app.include_router(bookings.router)
+
 @app.get("/")
 async def root():
-    return {"msg": "Let's Explore Allah's Creation! We provide you with a place to stay."}
+    return {"msg": "We provide you with a hotel room for your trip."}
